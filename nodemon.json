@@ -1,0 +1,8 @@
+{   
+    "ignore": [
+    	"src/js/",
+    	"node_modules/"
+    ],
+    "watch": ["index.js", "src"],
+    "ext": "js jsx scss html"
+}

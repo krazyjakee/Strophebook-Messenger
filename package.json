@@ -1,0 +1,30 @@
+{
+  "name": "strophebook-messenger",
+  "version": "1.0.0",
+  "description": "An xmpp client simulating facebook messenger",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krazyjakee/Strophebook-Messenger.git"
+  },
+  "keywords": [
+    "messenger",
+    "facebook",
+    "xmpp",
+    "strophe"
+  ],
+  "author": "Jake Cattrall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krazyjakee/Strophebook-Messenger/issues"
+  },
+  "homepage": "https://github.com/krazyjakee/Strophebook-Messenger#readme",
+  "dependencies": {
+    "react-tools": "^0.13.3",
+    "strophe": "^1.2.4"
+  }
+}
