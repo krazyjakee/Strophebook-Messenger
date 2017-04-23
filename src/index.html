@@ -4,8 +4,30 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="strophebook-container"></div>
-    <script src="javascript/strophebook.js"></script>
-    <script src="javascript/bootstrap.js"></script>
+    <div>
+    <input id="username" type="text" />
+    <input id="password" type="password" />
+    <input id="roster" type="text" />
+    <input id="submit" type="submit" />
+    <button id="acc1">Acc1</button>
+    <button id="acc2">Acc2</button>
+    </div>
+    <div id="strophebook-container">
+      <div id="strophebook-roster"></div>
+      <div id="strophebook-chat">
+        <select id="pickuser">
+        </select>
+        <input id="message" type="text" />
+        <input id="messagesubmit" type="submit" />
+      </div>
+    </div>
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/strophe.js"></script>
+    <script src="js/strophebook.utilities.js"></script>
+    <script src="js/strophebook.utilities.js"></script>
+    <script src="js/strophebook.roster.js"></script>
+    <script src="js/strophebook.base.js"></script>
+    <script src="js/strophebook.ui.js"></script>
+    <script src="js/strophebook.js"></script>
   </body>
 </html>

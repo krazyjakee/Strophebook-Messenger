@@ -1,0 +1,38 @@
+window.StropheBook = new StropheBookBase({
+  host: "chat2.igdb.com",
+  port: 5280,
+  resource: "website"
+})
+
+$("#acc1").click(() => {
+  $("#username").val("")
+  $("#password").val("")
+  $("#roster").val(`[""]`)
+})
+
+$("#acc2").click(() => {
+  $("#username").val("")
+  $("#password").val("")
+  $("#roster").val(`[""]`)
+})
+
+$("#messagesubmit").click(() => {
+  const username = $("#pickuser").val()
+  const message = $("#messagesubmit").val()
+  StropheBook.sendChat(username, message)
+})
+
+$("#submit").click(() => {
+  const username = $("#username").val()
+  const password = $("#password").val()
+  const roster = JSON.parse($("#roster").val())
+
+  StropheBook.connect({
+    username: username,
+    password: password
+  }).then(() => {
+
+    StropheBook.roster.externalList = roster
+
+  }).catch((err) => console.log(`Could not connect: ${err}`))
+})

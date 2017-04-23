@@ -17,6 +17,12 @@ const sassResult = sass.renderSync({
 })
 fs.writeFileSync(outFile, sassResult.css)
 
-exec(`jsx --extension jsx src/jsx src/js`, (error, stdout, stderr) => null)
+exec(`jsx --extension jsx src/jsx src/js/jsx`, (error, stdout, stderr) => null)
+
+const copyVendorfile = (path, filename) => {
+  fs.createReadStream(`${__dirname}/node_modules/${path}/${filename}`).pipe(fs.createWriteStream(`${srcFolder}/vendor/${filename}`))
+}
+copyVendorfile("strophe", "strophe.js")
+copyVendorfile("jquery/dist", "jquery.js")
 
 app.listen(8085, () => console.log('Listening on port 8085!'))
